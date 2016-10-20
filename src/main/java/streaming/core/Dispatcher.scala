@@ -22,7 +22,7 @@ object Dispatcher {
 
       val jobFilePath = contextParams.get("streaming.job.file.path").toString
 
-      var jobConfigStr = "{}"
+      var jobConfigStr:String = "{}"
 
       if (jobFilePath.startsWith("classpath://")) {
         val cleanJobFilePath = jobFilePath.substring("classpath://".length)
@@ -35,6 +35,7 @@ object Dispatcher {
       }
 
       StrategyDispatcher.getOrCreate(jobConfigStr)
+
     } else {
       StrategyDispatcher.getOrCreate(null)
     }
