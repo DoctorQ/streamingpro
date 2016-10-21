@@ -102,6 +102,9 @@
         </profile>
         <profile>
             <id>dev</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
             <properties>
                 <mode>dev</mode>
             </properties>
@@ -151,9 +154,7 @@
         </profile>
         <profile>
             <id>debug</id>
-            <activation>
-                <activeByDefault>true</activeByDefault>
-            </activation>
+
             <properties>
                 <mode>debug</mode>
             </properties>
