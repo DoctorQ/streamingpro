@@ -77,7 +77,7 @@
                 </dependency>
                 <dependency>
                     <groupId>org.apache.spark</groupId>
-                    <artifactId>${spark.streaming.kafka.artifactId}</artifactId>
+                    <artifactId>spark-streaming-kafka-0-8_2.10</artifactId>
                     <version>${spark.version}</version>
                 </dependency>
                 <dependency>
@@ -132,7 +132,7 @@
                 </dependency>
                 <dependency>
                     <groupId>org.apache.spark</groupId>
-                    <artifactId>${spark.streaming.kafka.artifactId}</artifactId>
+                    <artifactId>spark-streaming-kafka-0-8_${scala.binary.version}</artifactId>
                     <version>${spark.version}</version>
                 </dependency>
                 <dependency>
