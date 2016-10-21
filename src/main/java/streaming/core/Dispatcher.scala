@@ -8,11 +8,11 @@ import streaming.core.strategy.platform.{PlatformManager, SparkRuntime, SparkStr
 import scala.collection.JavaConversions._
 
 /**
- * 5/2/16 WilliamZhu(allwefantasy@gmail.com)
- */
+  * 5/2/16 WilliamZhu(allwefantasy@gmail.com)
+  */
 object Dispatcher {
   def dispatcher(contextParams: JMap[Any, Any]): StrategyDispatcher[Any] = {
-    if (contextParams!=null && contextParams.containsKey("streaming.job.file.path")) {
+    if (contextParams != null && contextParams.containsKey("streaming.job.file.path")) {
       val runtime = contextParams.get("_runtime_")
 
       val sparkContext = runtime match {
@@ -22,7 +22,7 @@ object Dispatcher {
 
       val jobFilePath = contextParams.get("streaming.job.file.path").toString
 
-      var jobConfigStr:String = "{}"
+      var jobConfigStr: String = "{}"
 
       if (jobFilePath.startsWith("classpath://")) {
         val cleanJobFilePath = jobFilePath.substring("classpath://".length)
