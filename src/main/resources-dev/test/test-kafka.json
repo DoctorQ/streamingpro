@@ -27,7 +27,7 @@
         ]
       },
       {
-        "name": "streaming.core.compositor.spark.streaming.transformation.ConsoleOutputCompositor",
+        "name": "streaming.core.compositor.spark.streaming.output.ConsoleOutputCompositor",
         "params": [
           {
           }

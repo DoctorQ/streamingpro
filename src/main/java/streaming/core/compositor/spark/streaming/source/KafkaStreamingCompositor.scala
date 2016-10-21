@@ -47,11 +47,14 @@ class KafkaStreamingCompositor[T] extends Compositor[T] {
     val ssc = runtime.streamingContext
 
     val kafkaStream = if (zkEnable) {
+      logger.info("createStream")
       val zk = getZk
       val groupId = getKafkaParams.get("groupId").get
       val topics = getTopics.map(f => (f, 1)).toMap
       KafkaUtils.createStream(ssc, zk, groupId, topics)
     } else {
+      logger.info("createDirectStream")
+      logger.info(getKafkaParams)
       KafkaUtils.createDirectStream[String, String, StringDecoder, StringDecoder](
         ssc,
         getKafkaParams,
