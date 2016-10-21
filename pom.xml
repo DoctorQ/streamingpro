@@ -252,7 +252,7 @@
             </dependencies>
         </profile>
         <profile>
-            <id>build-distr</id>
+            <id>all-jar</id>
             <build>
                 <plugins>
                     <plugin>
